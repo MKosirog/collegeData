@@ -12,6 +12,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     {
 
         @IBOutlet weak var tableView: UITableView!
+    
         var colleges = ["North Park", "Illinois State", "Illinois", "Illinois Weslyan"]
     
         override func viewDidLoad()
@@ -26,6 +27,18 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             // Dispose of any resources that can be recreated.
         }
 
+        func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+        {
+            return colleges.count
+        }
+    
+        func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
+        {
+            let cell = tableView.dequeueReusableCellWithIdentifier("MyCell", forIndexPath: indexPath)
+            cell.textLabel?.text = colleges[indexPath.row]
+            return cell
+        }
+    
 
     }
 
