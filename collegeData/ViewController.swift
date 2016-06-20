@@ -13,6 +13,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         @IBAction func onTappedPlusButton(sender: UIBarButtonItem)
         {
             let alert = UIAlertController(title: "Add College", message: nil, preferredStyle: .Alert)
+
+            
+            
             alert.addTextFieldWithConfigurationHandler { (textField) -> Void in
                 textField.placeholder = "Add College Here"
             }
@@ -28,6 +31,19 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             
         }
 
+        @IBOutlet weak var editButton: UIBarButtonItem!
+    @IBAction func onTappedEditButton(sender: UIBarButtonItem) {
+        if sender.tag == 0
+        {
+            tableView.editing = true
+            sender.tag = 1
+        }
+        else {
+            tableView.editing = false
+            sender.tag = 0
+        }
+    }
+    
         @IBOutlet weak var tableView: UITableView!
     
         var colleges = ["North Park", "Illinois State", "Illinois", "Illinois Weslyan"]
@@ -35,7 +51,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         override func viewDidLoad()
         {
             super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+            editButton.tag = 0
         }
 
         override func didReceiveMemoryWarning()
@@ -63,5 +79,17 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
                     tableView.reloadData()
                 }
         }
+        func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool
+        {
+            return true
+        }
+    
+    func tableView(tableView: UITableView, moveRowAtIndexPath sourceIndexPath: NSIndexPath, toIndexPath destinationIndexPath: NSIndexPath)
+    {
+        let college = colleges[sourceIndexPath.row]
+        colleges.removeAtIndex(sourceIndexPath.row)
+        colleges.insert(college, atIndex: destinationIndexPath.row)
+    }
+    
 }
 
