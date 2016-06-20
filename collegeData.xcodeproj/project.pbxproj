@@ -13,6 +13,7 @@
 		AA9831C01D186B5A00D4F45F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA9831BF1D186B5A00D4F45F /* Assets.xcassets */; };
 		AA9831C31D186B5A00D4F45F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA9831C11D186B5A00D4F45F /* LaunchScreen.storyboard */; };
 		AA9831CB1D188A0D00D4F45F /* CollegeNSObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9831CA1D188A0D00D4F45F /* CollegeNSObject.swift */; };
+		AA9831CD1D18975200D4F45F /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9831CC1D18975200D4F45F /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		AA9831C21D186B5A00D4F45F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AA9831C41D186B5A00D4F45F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AA9831CA1D188A0D00D4F45F /* CollegeNSObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollegeNSObject.swift; sourceTree = "<group>"; };
+		AA9831CC1D18975200D4F45F /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 				AA9831CA1D188A0D00D4F45F /* CollegeNSObject.swift */,
 				AA9831BC1D186B5A00D4F45F /* Main.storyboard */,
 				AA9831BF1D186B5A00D4F45F /* Assets.xcassets */,
+				AA9831CC1D18975200D4F45F /* DetailViewController.swift */,
 				AA9831C11D186B5A00D4F45F /* LaunchScreen.storyboard */,
 				AA9831C41D186B5A00D4F45F /* Info.plist */,
 			);
@@ -141,6 +144,7 @@
 				AA9831BB1D186B5A00D4F45F /* ViewController.swift in Sources */,
 				AA9831CB1D188A0D00D4F45F /* CollegeNSObject.swift in Sources */,
 				AA9831B91D186B5A00D4F45F /* AppDelegate.swift in Sources */,
+				AA9831CD1D18975200D4F45F /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

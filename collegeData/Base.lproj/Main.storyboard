@@ -6,6 +6,66 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
+        <!--Detail View Controller-->
+        <scene sceneID="cvi-GD-0sm">
+            <objects>
+                <viewController id="BfX-Zw-YcR" customClass="DetailViewController" customModule="collegeData" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="UOP-bc-Ubj"/>
+                        <viewControllerLayoutGuide type="bottom" id="mX9-Ry-Fdk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9H0-hc-x91">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="College" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vS5-f0-vdM">
+                                <rect key="frame" x="63" y="202" width="150" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="State" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="weR-PI-IyA">
+                                <rect key="frame" x="63" y="260" width="150" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Population" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dJv-MU-XQO">
+                                <rect key="frame" x="63" y="317" width="150" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c5T-Dq-b4D">
+                                <rect key="frame" x="420" y="260" width="46" height="30"/>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="onTappedSavedButton:" destination="BfX-Zw-YcR" eventType="touchUpInside" id="x7a-ce-6qM"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VMW-bi-iNd">
+                                <rect key="frame" x="175" y="28" width="250" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="RPu-ae-sBj"/>
+                                    <constraint firstAttribute="width" constant="250" id="oEw-nj-0me"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="dJv-MU-XQO" firstAttribute="centerX" secondItem="9H0-hc-x91" secondAttribute="centerX" id="ASd-Vb-wL0"/>
+                            <constraint firstItem="weR-PI-IyA" firstAttribute="centerX" secondItem="9H0-hc-x91" secondAttribute="centerX" id="Kyx-DL-Xun"/>
+                            <constraint firstItem="vS5-f0-vdM" firstAttribute="centerX" secondItem="9H0-hc-x91" secondAttribute="centerX" id="NA3-Ib-ps2"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="collegeTextField" destination="vS5-f0-vdM" id="YHI-2G-roH"/>
+                        <outlet property="imageView" destination="VMW-bi-iNd" id="hGS-n0-h1l"/>
+                        <outlet property="populationTextField" destination="dJv-MU-XQO" id="dtR-7o-Yjf"/>
+                        <outlet property="stateTextField" destination="weR-PI-IyA" id="Vgr-Xm-USg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fYT-9i-PRc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1227" y="-340"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
