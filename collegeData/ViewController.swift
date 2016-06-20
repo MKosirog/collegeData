@@ -8,18 +8,24 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate
+    {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+        @IBOutlet weak var tableView: UITableView!
+        var colleges = ["North Park", "Illinois State", "Illinois", "Illinois Weslyan"]
+    
+        override func viewDidLoad()
+        {
+            super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        }
+
+        override func didReceiveMemoryWarning()
+        {
+            super.didReceiveMemoryWarning()
+            // Dispose of any resources that can be recreated.
+        }
+
+
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
-}
 
