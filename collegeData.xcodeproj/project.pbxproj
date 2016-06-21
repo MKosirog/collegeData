@@ -61,9 +61,9 @@
 				AA9831B81D186B5A00D4F45F /* AppDelegate.swift */,
 				AA9831BA1D186B5A00D4F45F /* ViewController.swift */,
 				AA9831CA1D188A0D00D4F45F /* CollegeNSObject.swift */,
+				AA9831CC1D18975200D4F45F /* DetailViewController.swift */,
 				AA9831BC1D186B5A00D4F45F /* Main.storyboard */,
 				AA9831BF1D186B5A00D4F45F /* Assets.xcassets */,
-				AA9831CC1D18975200D4F45F /* DetailViewController.swift */,
 				AA9831C11D186B5A00D4F45F /* LaunchScreen.storyboard */,
 				AA9831C41D186B5A00D4F45F /* Info.plist */,
 			);

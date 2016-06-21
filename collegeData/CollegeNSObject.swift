@@ -8,22 +8,32 @@
 
 import UIKit
 
+//Created a custom class. CollegeNSObject inherits the 
+//properties of NSOject
 class CollegeNSObject: NSObject {
+    // properties of this class
+    var url = ""
     var name = ""
     var state = ""
     var population = 0
     var image = UIImage (named: "Default")
     
-    convenience init(name: String, state: String, population: Int, image: UIImage){
+// conv init lets you quickly insert data all at once
+    convenience init(url: String, name: String, state: String, population: Int, image: UIImage){
         self.init()
+        self.url = url
         self.name = name
         self.state = state
         self.population = population
         self.image = image
     }
-    convenience init(name: String) {
+    
+    // this initializes the alert with 3 text fields **** add 1 new property here URL
+    convenience init(url: String, name: String, state: String) {
         self.init()
+        self.url = url
         self.name = name
+        self.state = state
     }
 }
 
