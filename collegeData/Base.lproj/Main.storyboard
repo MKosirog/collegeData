@@ -101,7 +101,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="BfX-Zw-YcR" kind="show" id="Zzh-wD-DBx"/>
+                                            <segue destination="BfX-Zw-YcR" kind="show" id="ycz-Di-Bdh"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
