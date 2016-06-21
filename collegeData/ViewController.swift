@@ -11,12 +11,23 @@ import UIKit
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate
     {
         var college : [CollegeNSObject] = []
+    
+        override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
+        {
+            let dvc = segue.destinationViewController as! DetailViewController
+            let index = tableView.indexPathForSelectedRow?.row
+            dvc.college = college[index!]
+        }
+        override func viewWillAppear(animated: Bool)
+        {
+            super.viewWillAppear(animated)
+            tableView.reloadData()
+        }
+    
+    
         @IBAction func onTappedPlusButton(sender: UIBarButtonItem)
         {
             let alert = UIAlertController(title: "Add College", message: nil, preferredStyle: .Alert)
-
-            
-            
             alert.addTextFieldWithConfigurationHandler { (textField) -> Void in
                 textField.placeholder = "Add College Here"
             }
@@ -29,25 +40,24 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             }
             alert.addAction(addAction)
             self.presentViewController(alert, animated: true, completion: nil)
-            
         }
 
         @IBOutlet weak var editButton: UIBarButtonItem!
-    @IBAction func onTappedEditButton(sender: UIBarButtonItem) {
+    
+        @IBAction func onTappedEditButton(sender: UIBarButtonItem) {
         if sender.tag == 0
         {
             tableView.editing = true
             sender.tag = 1
         }
-        else {
+        else
+        {
             tableView.editing = false
             sender.tag = 0
         }
     }
     
         @IBOutlet weak var tableView: UITableView!
-    
-
     
         override func viewDidLoad()
         {
@@ -62,7 +72,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         override func didReceiveMemoryWarning()
         {
             super.didReceiveMemoryWarning()
-            // Dispose of any resources that can be recreated.
         }
 
         func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
@@ -95,6 +104,5 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         college.removeAtIndex(sourceIndexPath.row)
         college.insert(colleges, atIndex: destinationIndexPath.row)
     }
-    
 }
 

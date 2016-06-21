@@ -18,41 +18,43 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="College" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vS5-f0-vdM">
-                                <rect key="frame" x="63" y="202" width="150" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="State" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="weR-PI-IyA">
-                                <rect key="frame" x="63" y="260" width="150" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Population" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dJv-MU-XQO">
-                                <rect key="frame" x="63" y="317" width="150" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c5T-Dq-b4D">
-                                <rect key="frame" x="420" y="260" width="46" height="30"/>
-                                <state key="normal" title="Save"/>
-                                <connections>
-                                    <action selector="onTappedSavedButton:" destination="BfX-Zw-YcR" eventType="touchUpInside" id="x7a-ce-6qM"/>
-                                </connections>
-                            </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VMW-bi-iNd">
-                                <rect key="frame" x="175" y="28" width="250" height="150"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VMW-bi-iNd">
+                                <rect key="frame" x="175" y="91" width="250" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="RPu-ae-sBj"/>
                                     <constraint firstAttribute="width" constant="250" id="oEw-nj-0me"/>
                                 </constraints>
                             </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="College" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vS5-f0-vdM">
+                                <rect key="frame" x="225" y="259" width="150" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="State" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="weR-PI-IyA">
+                                <rect key="frame" x="225" y="317" width="150" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Population" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dJv-MU-XQO">
+                                <rect key="frame" x="225" y="374" width="150" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c5T-Dq-b4D">
+                                <rect key="frame" x="277" y="412" width="46" height="30"/>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="onTappedSavedButton:" destination="BfX-Zw-YcR" eventType="touchUpInside" id="x7a-ce-6qM"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="c5T-Dq-b4D" firstAttribute="centerX" secondItem="9H0-hc-x91" secondAttribute="centerX" id="06J-h5-0ls"/>
                             <constraint firstItem="dJv-MU-XQO" firstAttribute="centerX" secondItem="9H0-hc-x91" secondAttribute="centerX" id="ASd-Vb-wL0"/>
                             <constraint firstItem="weR-PI-IyA" firstAttribute="centerX" secondItem="9H0-hc-x91" secondAttribute="centerX" id="Kyx-DL-Xun"/>
                             <constraint firstItem="vS5-f0-vdM" firstAttribute="centerX" secondItem="9H0-hc-x91" secondAttribute="centerX" id="NA3-Ib-ps2"/>
+                            <constraint firstItem="VMW-bi-iNd" firstAttribute="centerX" secondItem="9H0-hc-x91" secondAttribute="centerX" id="e6v-81-pdc"/>
                         </constraints>
                     </view>
                     <connections>
@@ -98,6 +100,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="BfX-Zw-YcR" kind="show" id="Zzh-wD-DBx"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
