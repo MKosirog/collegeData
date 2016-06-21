@@ -17,6 +17,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         let dvc = segue.destinationViewController as! DetailViewController
         let index = tableView.indexPathForSelectedRow?.row
         dvc.college = college[index!]
+   //Stretch #1
+        dvc.title = college[index!].name
+        
     }
     override func viewWillAppear(animated: Bool)
     {
